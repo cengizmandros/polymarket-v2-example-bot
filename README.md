@@ -145,18 +145,19 @@ CLOB_HOST=https://clob-v2.polymarket.com
 
 The staging environment is open to everyone for testing pre-cutover. Your regular API credentials work against it.
 
-## V2 migration trilogy
+## V2 toolkit
 
-This bot is part of a pre-cutover trilogy:
+This bot is part of a V2 toolkit you can use end-to-end:
 
 1. **[polymarket-v2-migration-kit](https://github.com/cengizmandros/polymarket-v2-migration-kit)** — audit your existing V1 codebase
 2. **polymarket-v2-example-bot** — this repo, the reference implementation
-3. **polymarket-cheatsheet** — (coming) a comprehensive V2 API reference
+3. **[polymarket-cheatsheet](https://github.com/cengizmandros/polymarket-cheatsheet)** — single-page V2 API reference
+4. **[polymarket-backtest](https://github.com/cengizmandros/polymarket-backtest)** — event-driven V2-aware backtest framework
 
 ## Caveats
 
-- The V2 SDK (`py-clob-client-v2`) does not exist at the time of writing. This code implements the protocol directly from docs. Test against staging.
-- Collateral Onramp + pUSD contract addresses are pending official publication. Structural code is in place.
+- The official V2 SDK (`py-clob-client-v2`) is now published — this repo intentionally goes without it so you understand the wire protocol. Use the SDK for production trading; come here when something breaks.
+- Verify the Collateral Onramp + pUSD contract addresses against the latest published artifacts; structural code is in place.
 - ABIs for the Collateral Onramp in `src/collateral.py` are minimal — verify against published artifacts once available.
 
 ## License
